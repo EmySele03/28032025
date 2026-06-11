@@ -299,8 +299,8 @@ namespace proyecto_progra_s
                 {
                     id = id,
                     Nombre = txtNombre.Text.Trim(),
-                    Categoria = cbSexo.Text,
-                    PesoCategoria = cbPeso.Text
+                    Categoria = ObtenerTextoCombo(cbSexo),
+                    PesoCategoria = ObtenerTextoCombo(cbPeso)
                 };
 
                 participantes.Add(participante);
@@ -350,8 +350,8 @@ namespace proyecto_progra_s
 
                 seleccionado.id = nuevoId;
                 seleccionado.Nombre = txtNombre.Text.Trim();
-                seleccionado.Categoria = cbSexo.Text;
-                seleccionado.PesoCategoria = cbPeso.Text;
+                seleccionado.Categoria = ObtenerTextoCombo(cbSexo);
+                seleccionado.PesoCategoria = ObtenerTextoCombo(cbPeso);
 
                 if (idAnterior != nuevoId)
                 {
@@ -699,8 +699,8 @@ namespace proyecto_progra_s
         {
             txtId.Text = participante.id.ToString();
             txtNombre.Text = participante.Nombre;
-            cbSexo.Text = participante.Categoria;
-            cbPeso.Text = participante.PesoCategoria;
+            SeleccionarValorCombo(cbSexo, participante.Categoria);
+            SeleccionarValorCombo(cbPeso, participante.PesoCategoria);
         }
 
         //=================================================
@@ -726,14 +726,14 @@ namespace proyecto_progra_s
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(cbSexo.Text))
+            if (string.IsNullOrWhiteSpace(ObtenerTextoCombo(cbSexo)))
             {
                 MessageBox.Show("Seleccione la categoria");
                 cbSexo.Focus();
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(cbPeso.Text))
+            if (string.IsNullOrWhiteSpace(ObtenerTextoCombo(cbPeso)))
             {
                 MessageBox.Show("Seleccione la categoria de peso");
                 cbPeso.Focus();
@@ -741,6 +741,32 @@ namespace proyecto_progra_s
             }
 
             return true;
+        }
+
+        private string ObtenerTextoCombo(ComboBox combo)
+        {
+            ComboBoxItem item = combo.SelectedItem as ComboBoxItem;
+
+            if (item != null)
+            {
+                return Convert.ToString(item.Content).Trim();
+            }
+
+            return combo.Text.Trim();
+        }
+
+        private void SeleccionarValorCombo(ComboBox combo, string valor)
+        {
+            foreach (ComboBoxItem item in combo.Items.OfType<ComboBoxItem>())
+            {
+                if (Convert.ToString(item.Content) == valor)
+                {
+                    combo.SelectedItem = item;
+                    return;
+                }
+            }
+
+            combo.Text = valor;
         }
 
         private bool TryLeerIntentos(out List<int> arranque, out List<int> envion)
