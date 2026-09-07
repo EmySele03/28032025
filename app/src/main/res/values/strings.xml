@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mi Primera App</string>
+    <string name="app_name">CondoriFlores</string>
     <string name="title">Mi Primera App</string>
     <string name="subtitle">Ingrese sus datos</string>
     <string name="hint_campo1">Escribe tu nombre</string>
