@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Layout horizontal (landscape).
-  Misma estructura: ConstraintLayout + LinearLayout.
-  Los mismos IDs para que View Binding funcione en ambas orientaciones.
+  HORIZONTAL (landscape)
+  Dónde: app/src/main/res/layout-land/activity_main.xml
+  Mismos IDs que el layout vertical (importante para View Binding)
 -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -23,7 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Columna izquierda: título + campos + botón -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -80,7 +80,6 @@
 
         </LinearLayout>
 
-        <!-- Columna derecha: resultado -->
         <TextView
             android:id="@+id/tvResultado"
             android:layout_width="0dp"

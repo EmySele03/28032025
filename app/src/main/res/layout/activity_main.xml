@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Layout vertical (portrait).
-  Raíz: ConstraintLayout (requerido).
-  Interior: LinearLayout para organizar los controles (requerido).
+  VERTICAL (portrait)
+  Dónde: app/src/main/res/layout/activity_main.xml
+  Raíz = ConstraintLayout (id: main)
+  Dentro = LinearLayout vertical con los controles
 -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
@@ -40,6 +42,7 @@
             android:text="@string/subtitle"
             android:textSize="16sp" />
 
+        <!-- Campo 1 (ej. nombre) — sin label obligatorio -->
         <EditText
             android:id="@+id/etCampo1"
             android:layout_width="match_parent"
@@ -49,6 +52,7 @@
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
+        <!-- Campo 2 (ej. carrera) -->
         <EditText
             android:id="@+id/etCampo2"
             android:layout_width="match_parent"
@@ -67,6 +71,7 @@
             android:text="@string/btn_mostrar"
             android:textColor="@color/white" />
 
+        <!-- Aquí aparecen los datos al pulsar el botón -->
         <TextView
             android:id="@+id/tvResultado"
             android:layout_width="match_parent"

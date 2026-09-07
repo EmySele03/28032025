@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.miprimeraapp"
+    namespace = "com.example.condoriflores"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.miprimeraapp"
+        applicationId = "com.example.condoriflores"
         minSdk = 33
         targetSdk = 35
         versionCode = 1

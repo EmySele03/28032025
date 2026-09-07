@@ -1,31 +1,20 @@
-# Práctica N.º 1 — Aplicación Básica Android con View Binding e Interfaz XML
+# CondoriFlores — Práctica 1 Android
 
-## Cómo abrir el proyecto
+App básica con **View Binding** + interfaz XML (Java, minSdk 33, Kotlin DSL).
 
-1. Abre **Android Studio**.
-2. **File → Open** y selecciona esta carpeta.
-3. Espera a que Gradle sincronice.
-4. Ejecuta la app en un emulador o dispositivo (API 33+).
+## Guía rápida
 
-## Requisitos cumplidos
+Lee **[GUIA_PASO_A_PASO.md](GUIA_PASO_A_PASO.md)** — explica dónde hacer cada cosa en Android Studio (como en tus capturas).
 
-| Requisito | Estado |
-|-----------|--------|
-| Empty Views Activity / Java / minSdk 33 / Kotlin DSL | ✅ |
-| 2 `EditText` + 1 `Button` + 1 `TextView` | ✅ |
-| Al pulsar el botón se leen los campos y se muestran en el `TextView` | ✅ |
-| Raíz `ConstraintLayout` + `LinearLayout` interior | ✅ |
-| View Binding activado y usado en `MainActivity` | ✅ |
-| Layouts vertical y horizontal (`layout` / `layout-land`) | ✅ |
-| Sin iconos ni labels obligatorios de nombre/carrera/resultado | ✅ |
+## Archivos clave
 
-## Estructura importante
+| Archivo | Rol |
+|---------|-----|
+| `app/.../MainActivity.java` | View Binding + click del botón |
+| `res/layout/activity_main.xml` | Interfaz vertical |
+| `res/layout-land/activity_main.xml` | Interfaz horizontal |
+| `app/build.gradle.kts` | `viewBinding = true`, `minSdk = 33` |
 
-- `app/src/main/java/.../MainActivity.java` — lógica con View Binding
-- `app/src/main/res/layout/activity_main.xml` — vertical
-- `app/src/main/res/layout-land/activity_main.xml` — horizontal
-- `app/build.gradle.kts` — `viewBinding = true`, `minSdk = 33`
+## Abrir en Android Studio
 
-## Nota sobre el nombre del proyecto
-
-La consignas pide el nombre `ApellidoNombre`. Renombra el módulo/proyecto en Android Studio si tu docente lo exige con tu apellido y nombre.
+Si ya creaste el proyecto **CondoriFlores** en tu PC, copia estos XML/Java a tu proyecto (mismos paths). O abre este repo con File → Open.

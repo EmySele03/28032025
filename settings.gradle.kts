@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MiPrimeraApp"
+rootProject.name = "CondoriFlores"
 include(":app")
