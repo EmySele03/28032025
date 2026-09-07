@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi Primera App</string>
+    <string name="title">Mi Primera App</string>
+    <string name="subtitle">Ingrese sus datos</string>
+    <string name="hint_campo1">Escribe tu nombre</string>
+    <string name="hint_campo2">Escribe tu carrera</string>
+    <string name="btn_mostrar">Mostrar Datos</string>
+    <string name="resultado_vacio">Los datos aparecerán aquí</string>
+</resources>
