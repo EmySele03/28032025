@@ -26,17 +26,17 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Al pulsar el botón: leer los 2 EditText y mostrarlos en el TextView
+        // Al pulsar el botón: leer los 2 EditText y mostrarlos en lblResult
         binding.btnMostrar.setOnClickListener(v -> {
-            String nombre = binding.etCampo1.getText().toString().trim();
-            String carrera = binding.etCampo2.getText().toString().trim();
-            binding.tvResultado.setText(nombre + "\n" + carrera);
+            String nombre = binding.idNombreText.getText().toString().trim();
+            String carrera = binding.idCarreraText.getText().toString().trim();
+            binding.lblResult.setText(nombre + "\n" + carrera);
         });
 
     }//fin metodo onCreate

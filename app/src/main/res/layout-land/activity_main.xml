@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  HORIZONTAL (landscape)
-  Dónde: app/src/main/res/layout-land/activity_main.xml
-  Mismos IDs que el layout vertical (importante para View Binding)
--->
+<!-- Interfaz horizontal — mismos IDs que vertical -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +10,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearContenedor"
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -33,64 +29,67 @@
             android:paddingEnd="12dp">
 
             <TextView
-                android:id="@+id/tvTitulo"
-                android:layout_width="match_parent"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/title"
-                android:textColor="@color/purple_primary"
+                android:layout_gravity="center_horizontal"
+                android:text="Mi Primera App"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvSubtitulo"
+            <EditText
+                android:id="@+id/idNombreText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:gravity="center"
-                android:text="@string/subtitle"
-                android:textSize="14sp" />
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="Escribe tu nombre"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/etCampo1"
+                android:id="@+id/idCarreraText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/hint_campo1"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etCampo2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginTop="8dp"
-                android:hint="@string/hint_campo2"
-                android:inputType="text"
-                android:minHeight="48dp" />
+                android:ems="10"
+                android:hint="Escribe tu carrera"
+                android:inputType="text" />
 
             <Button
                 android:id="@+id/btnMostrar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="@color/purple_primary"
-                android:text="@string/btn_mostrar"
-                android:textColor="@color/white" />
+                android:text="Mostrar Datos" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvResultado"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/result_bg"
             android:gravity="center"
-            android:padding="16dp"
-            android:text="@string/resultado_vacio"
-            android:textColor="@color/gray_hint"
-            android:textSize="16sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:text="Los datos apareceran aqui"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

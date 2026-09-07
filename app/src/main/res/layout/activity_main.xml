@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  VERTICAL (portrait)
-  Dónde: app/src/main/res/layout/activity_main.xml
-  Raíz = ConstraintLayout (id: main)
-  Dentro = LinearLayout vertical con los controles
--->
+<!-- Interfaz vertical alineada a tu Design: idNombreText, idCarreraText, btnMostrar, lblResult -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,73 +10,64 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearContenedor"
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/title"
-            android:textColor="@color/purple_primary"
+            android:text="Mi Primera App"
             android:textSize="28sp"
             android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/idNombreText"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Escribe tu nombre"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/idCarreraText"
+            android:layout_width="320dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Escribe tu carrera"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnMostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mostrar Datos" />
+
         <TextView
-            android:id="@+id/tvSubtitulo"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Resultado:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lblResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="@string/subtitle"
-            android:textSize="16sp" />
-
-        <!-- Campo 1 (ej. nombre) — sin label obligatorio -->
-        <EditText
-            android:id="@+id/etCampo1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:hint="@string/hint_campo1"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
-
-        <!-- Campo 2 (ej. carrera) -->
-        <EditText
-            android:id="@+id/etCampo2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="@string/hint_campo2"
-            android:inputType="text"
-            android:minHeight="48dp" />
-
-        <Button
-            android:id="@+id/btnMostrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/purple_primary"
-            android:text="@string/btn_mostrar"
-            android:textColor="@color/white" />
-
-        <!-- Aquí aparecen los datos al pulsar el botón -->
-        <TextView
-            android:id="@+id/tvResultado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@color/result_bg"
             android:minHeight="80dp"
-            android:padding="16dp"
-            android:text="@string/resultado_vacio"
-            android:textColor="@color/gray_hint"
+            android:text="Los datos apareceran aqui"
             android:textSize="16sp" />
 
     </LinearLayout>
