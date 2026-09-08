@@ -1,4 +1,4 @@
-package com.example.condoriflores;
+package com.example.condori;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.condoriflores.databinding.ActivityMainBinding;
+import com.example.condori.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
