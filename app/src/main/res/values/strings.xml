@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CondoriFlores</string>
+    <string name="title">Mi primera App</string>
+    <string name="hint_nombre">Ingrese su nombre</string>
+    <string name="hint_carrera">Ingrese su carrera</string>
+    <string name="btn_mostrar">Mostrar Datos</string>
+</resources>
